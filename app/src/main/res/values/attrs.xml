@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="color_element_background" format="color"/>
+    <attr name="color_foreground" format="color"/>
+    <attr name="color_text_on_background_primary" format="color"/>
+    <attr name="color_text_on_background_secondary" format="color"/>
+    <attr name="color_background" format="color"/>
+    <attr name="color_text_on_element_background_primary" format="color"/>
+    <attr name="color_text_on_element_background_secondary" format="color"/>
+    
+</resources>

@@ -2,4 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="element_background_light">#10A439</color>
+    <color name="background_light">#FFFFFF</color>
+    <color name="foreground_light">#D7C100</color>
+    <color name="text_on_background_primary_light">#000000</color>
+    <color name="text_on_background_secondary_light">#6a6a6a</color>
+    <color name="text_on_element_background_primary_light">#FFFFFF</color>
+    <color name="text_on_element_background_secondary_light">#C8D1FF</color>
+
 </resources>
