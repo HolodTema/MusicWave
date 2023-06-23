@@ -6,8 +6,9 @@ import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.terabyte.musicwave.fragment.AllSongsFragment
 import com.terabyte.musicwave.fragment.PlaylistsFragment
+import javax.inject.Inject
 
-class TabAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
+class TabAdapter @Inject constructor(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
     FragmentStateAdapter(fragmentManager, lifecycle) {
 
     override fun getItemCount(): Int {

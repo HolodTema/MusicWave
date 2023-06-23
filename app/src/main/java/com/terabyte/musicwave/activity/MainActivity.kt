@@ -1,23 +1,36 @@
 package com.terabyte.musicwave.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.ViewModelProvider
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.terabyte.musicwave.R
+import com.terabyte.musicwave.application.MyApplication
 import com.terabyte.musicwave.databinding.ActivityMainBinding
+import com.terabyte.musicwave.di.MusicComponent
 import com.terabyte.musicwave.ui.TabAdapter
 import com.terabyte.musicwave.viewmodel.MainViewModel
+import javax.inject.Inject
 
-class MainActivity : AppCompatActivity() {
+class MainActivity: AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private lateinit var viewModel: MainViewModel
+
+    lateinit var musicComponent: MusicComponent
+
+    @Inject
+    lateinit var tabAdapter: TabAdapter
+
+    @Inject
+    lateinit var viewModel: MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        musicComponent = (application as MyApplication).appComponent.musicComponent()
+            .create(this, supportFragmentManager, lifecycle)
+        musicComponent.inject(this)
+
         super.onCreate(savedInstanceState)
+
         binding = ActivityMainBinding.inflate(layoutInflater)
-        viewModel = ViewModelProvider(this)[MainViewModel::class.java]
         setContentView(binding.root)
 
         configureTabLayout()
@@ -26,8 +39,7 @@ class MainActivity : AppCompatActivity() {
     private fun configureTabLayout() {
         binding.tabLayout.tabGravity = TabLayout.GRAVITY_FILL
 
-        val adapter = TabAdapter(supportFragmentManager, lifecycle)
-        binding.viewPager.adapter = adapter
+        binding.viewPager.adapter = tabAdapter
         binding.viewPager.isUserInputEnabled = true
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
             tab.text = when(position) {
