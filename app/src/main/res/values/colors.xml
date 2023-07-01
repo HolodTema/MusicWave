@@ -9,5 +9,9 @@
     <color name="text_on_background_secondary_light">#6a6a6a</color>
     <color name="text_on_element_background_primary_light">#FFFFFF</color>
     <color name="text_on_element_background_secondary_light">#C8D1FF</color>
+    <color name="stroke_item_song_light">#b6b6b6</color>
+    <color name="chosen_song_item_background_light">#c1edff</color>
+    <color name="not_chosen_song_item_background_light">#ffffff</color>
+    <color name="status_bar_light">#10a439</color>
 
 </resources>

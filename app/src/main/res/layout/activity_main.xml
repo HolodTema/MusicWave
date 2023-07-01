@@ -19,17 +19,23 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="?attr/color_element_background">
-
-        <ImageView
-            android:id="@+id/image_playing_song"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_playing_song"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/song_icon_lana"
-            android:layout_marginStart="16dp"/>
+            android:layout_marginStart="16dp"
+            app:cardCornerRadius="8dp">
+            <ImageView
+                android:id="@+id/image_playing_song"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/song_icon_lana"
+                />
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/text_playing_song_name"
@@ -39,8 +45,8 @@
             android:textColor="?attr/color_text_on_element_background_primary"
             android:textSize="16sp"
             app:layout_constraintEnd_toStartOf="@+id/image_playing_song_play"
-            app:layout_constraintStart_toEndOf="@+id/image_playing_song"
-            app:layout_constraintTop_toTopOf="@+id/image_playing_song"
+            app:layout_constraintStart_toEndOf="@+id/card_playing_song"
+            app:layout_constraintTop_toTopOf="@+id/card_playing_song"
             tools:text="Born To Die" />
 
         <TextView
@@ -50,15 +56,15 @@
             android:layout_marginHorizontal="8dp"
             android:textColor="?attr/color_text_on_element_background_secondary"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/image_playing_song"
+            app:layout_constraintBottom_toBottomOf="@+id/card_playing_song"
             app:layout_constraintEnd_toStartOf="@+id/image_playing_song_play"
-            app:layout_constraintStart_toEndOf="@+id/image_playing_song"
+            app:layout_constraintStart_toEndOf="@+id/card_playing_song"
             tools:text="Lana Del Rey" />
 
         <ImageView
             android:id="@+id/image_playing_song_play"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:src="@drawable/ic_play"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/image_playing_song_more"

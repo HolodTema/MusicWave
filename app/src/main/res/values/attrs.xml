@@ -7,5 +7,9 @@
     <attr name="color_background" format="color"/>
     <attr name="color_text_on_element_background_primary" format="color"/>
     <attr name="color_text_on_element_background_secondary" format="color"/>
+    <attr name="color_stroke_item_song" format="color"/>
+    <attr name="color_chosen_song_item_background" format="color"/>
+    <attr name="color_not_chosen_song_item_background" format="color"/>
+    <attr name="color_status_bar" format="color"/>
     
 </resources>

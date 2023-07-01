@@ -8,6 +8,13 @@
         <item name="color_text_on_background_secondary">@color/text_on_background_secondary_light</item>
         <item name="color_text_on_element_background_primary">@color/text_on_element_background_primary_light</item>
         <item name="color_text_on_element_background_secondary">@color/text_on_element_background_secondary_light</item>
+        <item name="color_stroke_item_song">@color/stroke_item_song_light</item>
+        <item name="color_chosen_song_item_background">@color/chosen_song_item_background_light</item>
+        <item name="color_not_chosen_song_item_background">@color/not_chosen_song_item_background_light</item>
+        <item name="color_status_bar">@color/status_bar_light</item>
+
+        <!--another way to change status bar color-->
+        <item name="colorPrimaryDark">@color/status_bar_light</item>
     </style>
 
     <style name="Theme.MusicWave" parent="Base.Theme.MusicWave" />
